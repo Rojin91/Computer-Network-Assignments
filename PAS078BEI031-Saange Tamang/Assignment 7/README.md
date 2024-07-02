@@ -84,23 +84,23 @@ The TCP header consists of the following fields:
 ![UDP-Packets-Wireshark](UDP_Packets-Wireshark.png)
 
 Relate the values to the fields:
-- **Source Port**: The port number of the sender.
-- **Destination Port**: The port number of the receiver.
-- **Length**: The length of the UDP header and payload.
-- **Checksum**: The checksum value for error-checking.
+- **Source Port**: 54060 (0xd31c) - The port number of the sender.
+- **Destination Port**: 443 (0x01bb) - The port number of the receiver.
+- **Length**: 1232 (0x04d0) - The length of the UDP header and payload.
+- **Checksum**: 0x4e86 - The checksum value for error-checking.
+
 
 ### Question 8: Locate a TCP packet in Wireshark and explain why the fields have the values they have.
 ![TCP_Packets-Wireshark](TCP_Packets-Wireshark.png)
 
 
 Explain the fields:
-- **Source Port**: The port number of the sender, typically a high-numbered ephemeral port.
-- **Destination Port**: The port number of the receiver, typically a well-known port (e.g., 80 for HTTP).
-- **Sequence Number**: The sequence number of the first byte in this segment.
-- **Acknowledgment Number**: The next sequence number the sender expects to receive.
-- **Flags**: Control flags indicating the state of the connection (e.g., SYN, ACK, FIN).
-- **Window Size**: The size of the sender's receive window.
-- **Checksum**: The checksum value for error-checking.
-- **Urgent Pointer**: Points to the sequence number of the byte following urgent data if the URG flag is set.
-- **Options**: Any optional fields used in the header.
-
+- **Source Port**: 443 (0x01bb) - The port number of the sender, typically a well-known port for HTTPS.
+- **Destination Port**: 53284 (0xd024) - The port number of the receiver, typically a high-numbered ephemeral port.
+- **Sequence Number**: 1 - The sequence number of the first byte in this segment.
+- **Acknowledgment Number**: 26 - The next sequence number the sender expects to receive.
+- **Flags**: 0x010 (ACK) - Control flags indicating the state of the connection.
+- **Window Size**: 303 - The size of the sender's receive window.
+- **Checksum**: 0xcc16 - The checksum value for error-checking.
+- **Urgent Pointer**: 0 - Points to the sequence number of the byte following urgent data if the URG flag is set.
+- **Options**: No-Operation (NOP), Timestamps - Optional fields used in the header.
