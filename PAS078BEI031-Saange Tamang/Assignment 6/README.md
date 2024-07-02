@@ -41,4 +41,4 @@ IPv6 header is always fixed at 40 bytes (320 bits).
    - The IPv6 address of the intended recipient of the packet.
 
 ##Question 4: In wireshark locate an IPv6 packet and discuss the header present.
-<img src - 'IPv6 Packets-Wireshark.png'>
+<img src - "IPv6 Packets-Wireshark.png">
