@@ -1,17 +1,16 @@
-IPV6
-Question 1 -> How long is an IPv6 header?
-IPv6 header is always fixed of 40 bytes(320 bits).
+# IPv6 Header Information
 
+## Question 1: How long is an IPv6 header?
+IPv6 header is always fixed at 40 bytes (320 bits).
 
-Question 2 -> What are the different fields in the header?
-
-+--------------------+--------------------+--------------------+--------------------+--------------------+------------+
-| Version (4 bits)   | Traffic Class (8 bits)                        | Flow Label (20 bits)                           |
-+--------------------+--------------------+--------------------+--------------------+--------------------+------------+
-| Payload Length (16 bits)                      | Next Header (8 bits)                            | Hop Limit (8 bits)                             |
-+---------------------------------------------------------------------------------------------------------------------+
-| Source Address (128 bits)                                                                                           |
-+---------------------------------------------------------------------------------------------------------------------+
-| Destination Address (128 bits)                                                                                      |
-+---------------------------------------------------------------------------------------------------------------------+
+## Question 2: What are the different fields in the header?
++------------------+--------------------+----------------------+
+| Version (4 bits) | Traffic Class (8 bits) | Flow Label (20 bits) |
++------------------+--------------------+----------------------+
+| Payload Length (16 bits) | Next Header (8 bits) | Hop Limit (8 bits) |
++-------------------------------------------------------------+
+| Source Address (128 bits) |
++-------------------------------------------------------------+
+| Destination Address (128 bits) |
++-------------------------------------------------------------+
 
