@@ -12,4 +12,4 @@ This is a simple file upload server written in Go. The server allows users to up
 1. **Clone the repository:**
    - git clone https://github.com/Rojin91/Computer-Network-Assignments
    - Navigate to assignment_8
-   - cd file-upload-server
+   - cd Question_1.Uploading_PNG--GO
