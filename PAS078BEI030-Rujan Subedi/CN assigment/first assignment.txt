@@ -1,5 +1,0 @@
-IP address: 192.168.18.9
-Subnet mask: 255.255.255.0
-Network address: 192.168.18.0
-Broadcast address: 192.168.18.255
-End devices supported by network: 254
