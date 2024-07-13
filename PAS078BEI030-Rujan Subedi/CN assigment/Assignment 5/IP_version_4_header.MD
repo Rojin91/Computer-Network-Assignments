@@ -1,4 +1,5 @@
 Q) What is the value of each of the header fields? Explain why the value is what it is.
+
 ans:
  According to the packet captured in Wireshark, the values of header fields are given as follows:
  1. Version: Its value is 4. It identifies the version of IP in use.
