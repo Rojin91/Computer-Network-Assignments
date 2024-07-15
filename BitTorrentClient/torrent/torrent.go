@@ -39,3 +39,6 @@ func (t *TorrentFile) InfoHash() [20]byte {
 	var buf bytes.Buffer
 	bencode.Marshal(&buf, t.Info)
 	return sha1.Sum(buf.Bytes())
+
+
+	//Comment
