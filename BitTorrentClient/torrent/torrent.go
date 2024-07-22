@@ -1,11 +1,7 @@
 package torrent
 
 import (
-	"bytes"
-	"crypto/sha1"
-	"fmt"
 	"os"
-
 	"github.com/jackpal/bencode-go"
 )
 
@@ -21,24 +17,20 @@ type InfoDict struct {
 	Length      int    `bencode:"length"`
 }
 func Open(path string) (*TorrentFile, error) {
-	file, err := os.Open(path)
+	//attempt to open the file from given path
+	file, err := os.Open(path)	
 	if err != nil {
+		//If there is error in opening the file, return nil and error
 		return nil, err
 	}
+	//Ensuring the file is closed when the function exits
 	defer file.Close()
-
+    //using the bencode library from github to decode the file contents to the torrentFile
 	torrent := TorrentFile{}
 	err = bencode.Unmarshal(file, &torrent)
 	if err != nil {
 		return nil, err
 	}
+	//return the populated torrentFile struct and nil error
 	return &torrent, nil
 }
-
-func (t *TorrentFile) InfoHash() [20]byte {
-	var buf bytes.Buffer
-	bencode.Marshal(&buf, t.Info)
-	return sha1.Sum(buf.Bytes())
-
-
-	//Comment
