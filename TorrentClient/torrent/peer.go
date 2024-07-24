@@ -15,6 +15,7 @@ func (p Peer) String() string {
 	return fmt.Sprintf("%s:%d",p.IP.String(),p.Port)
 }
 
+//Initialize TCP connection
 func Connect(peer Peer) (net.Conn, error) {
 	//Set a 3-second timer to connect to the peer
  	conn, err := net.DialTimeout("tcp",peer.String(),3*time.Second)
