@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"log"
 	"os"
-	"BitTorrentClient/torrent"
-	"BitTorrentClient/utils"
+	"TorrentClient/torrent"
+	"TorrentClient/utils"
 )
 
 func main() {
