@@ -1,5 +1,5 @@
 
-## Questions
+##  Questions
 - Differentiate between OSI & TCP/IP model.
 - Differentiate between Peer to Peer architecture & Client Server architecture .
 - What are Seven layers of OSI model and write functions of each layers?
