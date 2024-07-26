@@ -1,1 +1,40 @@
+POST /upload HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+Content-Length: 67190
+Cache-Control: max-age=0
+sec-ch-ua: "Chromium";v="127", "Not)A;Brand";v="99"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+Origin: http://127.0.0.1:5500
+DNT: 1
+Upgrade-Insecure-Requests: 1
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryr8JnZjldwocNwa72
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: http://127.0.0.1:5500/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
 
+------WebKitFormBoundaryr8JnZjldwocNwa72
+Content-Disposition: form-data; name="myFile"; filename="Screenshot 2024-07-24 at 10.21.52...PM.png"
+Content-Type: image/png
+
+.PNG
+.
+...
+IHDR...p...........f.....sRGB........beXIfMM.*.......i...........................P.......................p................ASCII...Screenshote4......iTXtXML:com.adobe.xmp.....<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="XMP Core 6.0.0">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""
+            xmlns:exif="http://ns.adobe.com/exif/1.0/">
+         <exif:PixelYDimension>692</exif:PixelYDimension>
+         <exif:PixelXDimension>368</exif:PixelXDimension>
+         <exif:UserComment>Screenshot</exif:UserComment>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta>
+ ..f..@.IDATx..].|.....@H !. !...{."H..)*HQ@....."E.C.wP..Q.."J..K..J .Z..IH..o..{...Ke._n..7.}'...7{/W)..q$"..... ...x..Mv.....U..R(..... .e....#..	./....4..%J$9..w.....P\..........)cv.......}..KA.# ....K...........zR.....q.A.z..T..
