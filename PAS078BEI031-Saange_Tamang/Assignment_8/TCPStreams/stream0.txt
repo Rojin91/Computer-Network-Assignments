@@ -1,1 +1,68 @@
+GET /Question_1.Uploading_PNG--GO/uploadFiles.html HTTP/1.1
+Host: 127.0.0.1:5500
+Connection: keep-alive
+sec-ch-ua: "Chromium";v="127", "Not)A;Brand";v="99"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+DNT: 1
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+If-None-Match: W/"1b8-19088c62345"
+If-Modified-Since: Sat, 06 Jul 2024 16:00:04 GMT
+
+HTTP/1.1 304 Not Modified
+Vary: Origin
+Access-Control-Allow-Credentials: true
+Accept-Ranges: bytes
+Cache-Control: public, max-age=0
+Last-Modified: Sat, 06 Jul 2024 16:00:04 GMT
+ETag: W/"1b8-19088c62345"
+Date: Fri, 26 Jul 2024 16:39:55 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+GET /favicon.ico HTTP/1.1
+Host: 127.0.0.1:5500
+Connection: keep-alive
+sec-ch-ua: "Chromium";v="127", "Not)A;Brand";v="99"
+DNT: 1
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+sec-ch-ua-platform: "macOS"
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://127.0.0.1:5500/Question_1.Uploading_PNG--GO/uploadFiles.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+
+HTTP/1.1 404 Not Found
+Vary: Origin
+Access-Control-Allow-Credentials: true
+Content-Security-Policy: default-src 'none'
+X-Content-Type-Options: nosniff
+Content-Type: text/html; charset=utf-8
+Content-Length: 150
+Date: Fri, 26 Jul 2024 16:39:56 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot GET /favicon.ico</pre>
+</body>
+</html>
 
