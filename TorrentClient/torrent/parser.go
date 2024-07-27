@@ -3,14 +3,45 @@ package torrent
 import (
 	"bytes"
 	"crypto/sha1"
-	"github.com/jackpal/bencode-go"
+	"encoding/hex"
+	"errors"
+	"io"
+	"os"
 )
 
-//Infohash calculates and return SHA-1 hash of the 'info' dictionary from the .torrent file
-func (t *TorrentFile) InfoHash() [20]byte {
-	var buf bytes.Buffer
-	//Marshall the 'info' dictionary into buffer using bencode
-	bencode.Marshal(&buf, t.Info)
-    //Compute the SHA-1 hash of the buffer's content
-	return sha1.Sum(buf.Bytes())
+// ParseInfoHash parses the info hash from the .torrent file
+func ParseInfoHash(r io.Reader) ([20]byte, error) {
+	data, err := io.ReadAll(r)
+	if err != nil {
+		return [20]byte{}, err
+	}
+
+	var infoDict map[string]interface{}
+	if err := Unmarshal(bytes.NewReader(data), &infoDict); err != nil {
+		return [20]byte{}, err
+	}
+	info, ok := infoDict["info"]
+	if !ok {
+		return [20]byte{}, errors.New("no info dictionary found")
+	}
+	bencodedInfo, err := Marshal(info)
+	if err != nil {
+		return [20]byte{}, err
+	}
+	return sha1.Sum(bencodedInfo), nil
+}
+
+// InfoHashFromFile computes the info hash from a .torrent file
+func InfoHashFromFile(path string) ([20]byte, error) {
+	file, err := os.Open(path)
+	if err != nil {
+		return [20]byte{}, err
+	}
+	defer file.Close()
+	return ParseInfoHash(file)
+}
+
+// InfoHashToString converts the info hash to a string
+func InfoHashToString(infoHash [20]byte) string {
+	return hex.EncodeToString(infoHash[:])
 }
