@@ -1,28 +1,24 @@
 package torrent
 
 import (
-    "net"
-    "net/http"
-    "net/url"
-    "strconv"
-    "io"
-    "bytes"
+	"bytes"
 	"encoding/binary"
-    "github.com/jackpal/bencode-go"
+	"fmt"
+	"io"
+	"net"
+	"net/http"
+	"net/url"
+	"strconv"
 )
 
-//getPeers communicates with the tracker to retrieve a list of peers for the torrent.
+// getPeers communicates with the tracker to retrieve a list of peers for the torrent.
 func getPeers(t *TorrentFile) ([]Peer, error) {
-	 // Parse the tracker announce URL from the torrent file.
     base, err := url.Parse(t.Announce)
     if err != nil {
-        return nil, err
+        return nil, fmt.Errorf("error parsing announce URL: %w", err)
     }
 
-	// Store the result of t.InfoHash() in a variable for later use.
-	infoHash := t.InfoHash()
-
-	 // Construct the query parameters for the tracker request.
+    infoHash := t.InfoHash()
     params := url.Values{
         "info_hash":  {string(infoHash[:])},
         "peer_id":    {"-BT0001-123456789012"},
@@ -33,44 +29,52 @@ func getPeers(t *TorrentFile) ([]Peer, error) {
         "compact":    {"1"},
     }
 
-	// Encode the query parameters and attach them to the base URL.
     base.RawQuery = params.Encode()
 
-	// Make an HTTP GET request to the tracker's announce URL.
     resp, err := http.Get(base.String())
     if err != nil {
-        return nil, err
+        return nil, fmt.Errorf("error making GET request to tracker: %w", err)
     }
     defer resp.Body.Close()
 
-	// Read the response body.
     body, err := io.ReadAll(resp.Body)
     if err != nil {
-        return nil, err
+        return nil, fmt.Errorf("error reading response body: %w", err)
     }
 
-	// Unmarshal the bencoded response into a map.
     trackerResponse := make(map[string]interface{})
-    err = bencode.Unmarshal(bytes.NewReader(body), &trackerResponse)
+    err = Unmarshal(bytes.NewReader(body), &trackerResponse)
     if err != nil {
-        return nil, err
+        return nil, fmt.Errorf("error unmarshalling tracker response: %w", err)
     }
 
-	// Parse the peer list from the tracker response.
-    peers, err := parsePeers(trackerResponse["peers"].([]byte))
-    if err != nil {
-        return nil, err
+    fmt.Printf("Tracker Response: %+v\n", trackerResponse)
+
+    peersValue, ok := trackerResponse["peers"]
+    if !ok {
+        return nil, fmt.Errorf("tracker response does not contain 'peers' field")
     }
-    return peers, nil
+
+    if peersValue == nil {
+        return nil, fmt.Errorf("tracker response contains nil 'peers' field")
+    }
+
+    fmt.Printf("Peers Value: %v (Type: %T)\n", peersValue, peersValue)
+
+    peersBinary, ok := peersValue.([]byte)
+    if !ok {
+        return nil, fmt.Errorf("invalid peers format: expected []byte, got %T", peersValue)
+    }
+
+    return UnmarshalPeers(peersBinary)
 }
 
-// parsePeers converts the compact peer list into a slice of Peer structs.
-func parsePeers(peersBinary []byte) ([]Peer, error) {
+// UnmarshalPeers parses a list of peers from a binary representation.
+func UnmarshalPeers(peersBinary []byte) ([]Peer, error) {
     const peerSize = 6
     numPeers := len(peersBinary) / peerSize
     peers := make([]Peer, numPeers)
 
-	// Iterate over the peer list and extract IP and port for each peer.
     for i := 0; i < numPeers; i++ {
         peers[i].IP = net.IP(peersBinary[i*peerSize : i*peerSize+4])
         peers[i].Port = binary.BigEndian.Uint16(peersBinary[i*peerSize+4 : i*peerSize+6])

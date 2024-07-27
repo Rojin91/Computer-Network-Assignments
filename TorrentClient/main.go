@@ -1,32 +1,29 @@
 package main
 
 import (
-	"fmt"
-	"log"
-	"os"
-	"TorrentClient/torrent"
-	"TorrentClient/utils"
+    "fmt"
+    "log"
+    "os"
+    "TorrentClient/torrent"
 )
 
 func main() {
-	utils.InitLogger()
-	if len(os.Args) < 2 {
-		log.Println("Error: No path to torrent file provided.")
-		fmt.Println("Usage: BitTorrentClient <path-to-torrent-file>")
-		os.Exit(1)
-	}
+    if len(os.Args) < 2 {
+        fmt.Println("Usage: torrent-client <path-to-torrent-file>")
+        os.Exit(1)
+    }
 
-	torrentPath := os.Args[1]
+    torrentFilePath := os.Args[1]
+    tFile, err := torrent.LoadTorrentFile(torrentFilePath)
+    if err != nil {
+        log.Fatalf("Failed to load torrent file: %v", err)
+    }
 
-	// Open and parse the .torrent file
-	torrentFile, err := torrent.Open(torrentPath)
-	if err != nil {
-		log.Fatalf("Failed to open torrent file: %v", err)
-	}
+    outputFilePath := "downloaded_file" // Set your output file path here
+    err = tFile.Download(outputFilePath)
+    if err != nil {
+        log.Fatalf("Download failed: %v", err)
+    }
 
-	// Start the download process
-	err = torrentFile.Download("output.dat")
-	if err != nil {
-		log.Fatalf("Failed to download torrent: %v", err)
-	}
+    fmt.Println("Download completed successfully.")
 }
