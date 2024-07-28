@@ -12,6 +12,12 @@ An HTTP request consists of several components, each serving a specific purpose.
 3. Blank Line
 4. Body (Optional)
 
+GET / HTTP/1.1
+Host: r3.i.lencr.org
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.9
 
 ### 1. Request Line
 - **Method:** `GET` - Requests data from the specified resource.
@@ -31,6 +37,21 @@ This separates the headers from the body. In this request, there is no body.
 ## HTTP Response Dissection
 
 An HTTP response consists of a status line, headers, and optionally a body.
+
+HTTP/1.1 200 OK
+Server: nginx
+Content-Type: application/pkix-cert
+Last-Modified: Fri, 04 Aug 2023 20:57:56 GMT
+ETag: "64dc6654-51a"
+Content-Disposition: attachment; filename="R3.der"
+Accept-Ranges: bytes
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Content-Length: 1253
+Cache-Control: max-age=3600
+Expires: Sun, 28 Jul 2024 16:40:37 GMT
+Date: Sun, 28 Jul 2024 15:40:37 GMT
+Connection: keep-alive
 
 ### Status Line
 - **HTTP Version:** `HTTP/1.1`
