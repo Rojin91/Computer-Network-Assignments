@@ -9,17 +9,18 @@ import (
 
 func main() {
     if len(os.Args) < 2 {
-        fmt.Println("Usage: torrent-client <path-to-torrent-file>")
+        fmt.Println("Usage: TorrentClient <path-to-torrent-file>")
         os.Exit(1)
     }
 
     torrentFilePath := os.Args[1]
+
     tFile, err := torrent.LoadTorrentFile(torrentFilePath)
     if err != nil {
         log.Fatalf("Failed to load torrent file: %v", err)
     }
 
-    outputFilePath := "downloaded_file" // Set your output file path here
+    outputFilePath := tFile.Info.Name // Use the torrent's file name for the output file
     err = tFile.Download(outputFilePath)
     if err != nil {
         log.Fatalf("Download failed: %v", err)
