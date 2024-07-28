@@ -4,7 +4,6 @@ import (
     "bufio"
     "bytes"
     "fmt"
-    "io"
     "reflect"
     "strconv"
 )
@@ -73,7 +72,7 @@ func unmarshalString(r *bufio.Reader, v reflect.Value, prefix byte) error {
         return err
     }
     str := make([]byte, length)
-    _, err = io.ReadFull(r, str)
+    _, err = r.Read(str)
     if err != nil {
         return err
     }
@@ -143,7 +142,7 @@ func Marshal(v interface{}) ([]byte, error) {
     return buf.Bytes(), nil
 }
 
-func marshal(w io.Writer, v reflect.Value) error {
+func marshal(w *bytes.Buffer, v reflect.Value) error {
     switch v.Kind() {
     case reflect.Int, reflect.Int8, reflect.Int16, reflect.Int32, reflect.Int64:
         _, err := fmt.Fprintf(w, "i%de", v.Int())
@@ -152,7 +151,7 @@ func marshal(w io.Writer, v reflect.Value) error {
         _, err := fmt.Fprintf(w, "%d:%s", len(v.String()), v.String())
         return err
     case reflect.Slice:
-        _, err := io.WriteString(w, "l")
+        _, err := w.WriteString("l")
         if err != nil {
             return err
         }
@@ -161,10 +160,10 @@ func marshal(w io.Writer, v reflect.Value) error {
                 return err
             }
         }
-        _, err = io.WriteString(w, "e")
+        _, err = w.WriteString("e")
         return err
     case reflect.Map:
-        _, err := io.WriteString(w, "d")
+        _, err := w.WriteString("d")
         if err != nil {
             return err
         }
@@ -176,7 +175,7 @@ func marshal(w io.Writer, v reflect.Value) error {
                 return err
             }
         }
-        _, err = io.WriteString(w, "e")
+        _, err = w.WriteString("e")
         return err
     default:
         return fmt.Errorf("unsupported type: %v", v.Kind())

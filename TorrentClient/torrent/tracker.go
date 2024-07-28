@@ -1,15 +1,20 @@
 package torrent
 
 import (
-	"bytes"
-	"encoding/binary"
-	"fmt"
-	"io"
-	"net"
-	"net/http"
-	"net/url"
-	"strconv"
+    "encoding/binary"
+    "fmt"
+    "net"
+    "net/http"
+    "net/url"
+    "strconv"
+    "io"
 )
+
+// Peer represents a peer in the BitTorrent network.
+type Peer struct {
+    IP   net.IP
+    Port uint16
+}
 
 // getPeers communicates with the tracker to retrieve a list of peers for the torrent.
 func getPeers(t *TorrentFile) ([]Peer, error) {
@@ -43,7 +48,7 @@ func getPeers(t *TorrentFile) ([]Peer, error) {
     }
 
     trackerResponse := make(map[string]interface{})
-    err = Unmarshal(bytes.NewReader(body), &trackerResponse)
+    err = Unmarshal(body, &trackerResponse)
     if err != nil {
         return nil, fmt.Errorf("error unmarshalling tracker response: %w", err)
     }
