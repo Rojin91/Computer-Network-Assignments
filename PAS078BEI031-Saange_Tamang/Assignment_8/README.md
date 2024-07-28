@@ -2,6 +2,15 @@
 - IN the programming language of your choice write a web application that allows you to upload a file.
 - Capture a traffic in wireshark while uploading a file. Follow the TCP stream and explain conncection initialization , connection maintainance and conncection termination.
 
+## Tasks Done
+#### 1. Made a simple PNG uploader in Go
+- Captured the TCP Streams while uploading the file in `WIRESHARK`
+- Understood the TCP `Connection-Initialization` , `Connection-Maintenance` and `Connection-Termination`
+- Captured the TCP Packets in `WIRESHARK`
+      
+#### 2. Made a simple TCPClient to understand the TCP in `GO` for `FUN`
+- To run TCPClient in your local machine, just read the `README` in TCPClient directory
+
 ## TCP Packet Analysis
 
 This is my explanation of the TCP packet capture file and the analysis of the connection initialization, maintenance, and termination processes. The capture file was analyzed using Wireshark, and the key steps and packets involved in these processes are outlined below.Please note that here I have only highlighted the request-response cycle of client and server with SYN number.Here `SYN`, `SYN-ACK` ,`ACK` have the major role in depicting the `TCP connection`.There might be some technical errors since I'm a noobie.Just ignore the errors.
@@ -63,3 +72,7 @@ When the data transfer is complete, the connection is closed  using a terminatio
   - `No. 83 - 63209 → 8080 [ACK] Seq=60222 Ack=335 Win=407424 Len=0 TSval=3524912415 TSecr=658681316`
 
   ### Note: The sequence (SEQ) and acknowledgment (ACK) numbers in TCP packets are incremented accordingly to ensure reliable and ordered data transmission.This is the underlying principle of TCP.
+
+      
+      
+ 
