@@ -2,7 +2,7 @@ The header fields of ipv6 protocal are as follows:
 
 Version: Its value is 6. This specifies the version of the IP protocol.
 
-Traffic Class: Its value is 0x00 (DSCP: CS0, ECN: Not-ECT). This is used for packet classification for Quality of Service (QoS).
+Traffic Class: Its value is 0x00. This is used for packet classification for Quality of Service (QoS).
 
 Flow Label: Its value is 0xaef9f. This is used to identify flows of packets that require special handling by routers.
 
