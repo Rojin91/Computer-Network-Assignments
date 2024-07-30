@@ -72,9 +72,11 @@
    * Used for various TCP options.  
    * The length of the options is variable and affects the total size of the TCP header.
 
-**Visual Representation of UDP and TCP Headers**
 
 ### **Question 7: Locate a UDP packet in Wireshark and relate the values to the fields.**
+
+![][https://github.com/Rojin91/Computer-Network-Assignments/blob/main/PAS078BEI041-Sulav_Kandel/Assignment_8/UDP.jpg]
+
 
 **Breakdown of the UDP Header Fields:**
 
@@ -100,7 +102,7 @@
 
 ### **Question 8: Locate a TCP packet in Wireshark and explain why the fields have the values they have.**
 
-![][image1]
+![][https://github.com/Rojin91/Computer-Network-Assignments/blob/main/PAS078BEI041-Sulav_Kandel/Assignment_8/UDP.jpg]
 
 ### **TCP Header Fields Breakdown:**
 
