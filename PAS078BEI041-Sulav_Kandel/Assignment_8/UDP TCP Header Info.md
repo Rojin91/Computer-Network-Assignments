@@ -103,7 +103,7 @@
 
 ### **Question 8: Locate a TCP packet in Wireshark and explain why the fields have the values they have.**
 
-![TCP Packet][https://github.com/Rojin91/Computer-Network-Assignments/blob/main/PAS078BEI041-Sulav_Kandel/Assignment_8/UDP.jpg]
+ ![TCP Packet](https://github.com/Rojin91/Computer-Network-Assignments/blob/main/PAS078BEI041-Sulav_Kandel/Assignment_8/TCP.jpg)
 
 ### **TCP Header Fields Breakdown:**
 
