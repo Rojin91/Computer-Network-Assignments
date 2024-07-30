@@ -12,7 +12,12 @@ Network Layer: Routing Protocols
 
 Here’s a visual representation of how the header length affects the overall structure:
 
+![IPV4](https://github.com/Rojin91/Computer-Network-Assignments/blob/main/PAS078BEI041-Sulav_Kandel/Assignment_6/IPV4.jpg)
+
+
 Now, let’s discuss all the fields.
+![IPV4](https://github.com/Rojin91/Computer-Network-Assignments/blob/main/PAS078BEI041-Sulav_Kandel/Assignment_6/IPV4_fields.jpg)
+
 
 1) **Version (4 Bits):** 
 
