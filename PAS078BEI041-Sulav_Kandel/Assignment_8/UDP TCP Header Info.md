@@ -75,7 +75,7 @@
 
 ### **Question 7: Locate a UDP packet in Wireshark and relate the values to the fields.**
 
-![][https://github.com/Rojin91/Computer-Network-Assignments/blob/main/PAS078BEI041-Sulav_Kandel/Assignment_8/UDP.jpg]
+![UDP Packet][https://github.com/Rojin91/Computer-Network-Assignments/blob/main/PAS078BEI041-Sulav_Kandel/Assignment_8/UDP.jpg]
 
 
 **Breakdown of the UDP Header Fields:**
@@ -102,7 +102,7 @@
 
 ### **Question 8: Locate a TCP packet in Wireshark and explain why the fields have the values they have.**
 
-![  ][https://github.com/Rojin91/Computer-Network-Assignments/blob/main/PAS078BEI041-Sulav_Kandel/Assignment_8/UDP.jpg]
+![TCP Packet][https://github.com/Rojin91/Computer-Network-Assignments/blob/main/PAS078BEI041-Sulav_Kandel/Assignment_8/UDP.jpg]
 
 ### **TCP Header Fields Breakdown:**
 
