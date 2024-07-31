@@ -1,0 +1,104 @@
+GET / HTTP/1.1
+Host: httpforever.com
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8
+Sec-GPC: 1
+Accept-Language: en-US,en;q=0.9
+Accept-Encoding: gzip, deflate
+
+e...a..4snz..p|..N.8R.....S...N.ov.[....*>.P)q..W....k.4.m.o6...7....i..3..*....a..b....Pm...`Q..p..y.
+#..,...
+....i.g.Nh(v.......<'.. 	..y......%..4.:a1.:..$..i.BJM.....0(Z.A{A;L..\.J..@....|.u.P....\,.....k7d|..t....uZ.D.A...I.t/....	.Y..n=Q....\[J.*-..e5.rF.\..q.....YT.K..~-;e.G.L.U.(#)ba.	.&J3..*G.P.4.g..V.......Y.{....SeI2....n.'RLS.. .J	.|....rT
+..
+.._.j.....*e.R...s..!........<..E_q...t....g.3T...'5.......WL`f
+.S...@9..	.....Q(."..V.s..1...Ig...).....gc....mJ......[..?..8/+.]..@.4..*.."....U............4%..&M..8.Y...6f.pL..Z6.*s..'ZU.Q.....hR..0..M..
+.#"...Z..t... .O@....r.....lI...m..?......
+.o...o......./..
+w>..b.&
+..D.<.]\...?>..m6Ch....3......m...u^.=..=....B..C.C?.
+.b....R...X....mA.z.e...5G.YYT!.	..+.
+....%..
+...fW......h........5q..P.{..2......p.(b..k.Q.i.uBWG\...!F..V.H.?...j......<..........ra...r...=IJz...;}8..R,........&.g+aQ,....Lm.."..q....k.C..,n.Z.Wo.......... .S<i..D(.7........G..4^..3g.c......9nW.mPUU..Ho.q......Z....n.....h.Yg~.4......f..o2X.
+.....7..... ;..L.P..p...{.<.*...]S.........6E...2...`...%..xf3,.	...i..W.gaO.h.._2.S...%
+. ..........).?.r..g.......G.....fk.....l...Q....y04iha).(...'..s.y}.o.h......v...i.....T.X.....PY.....w....Xg..Sz...7. .{..?..G..F......a.........A.......ky.F.}Ov:.....V....|.Y...!
+...%+7j*.*..Z8.v..~.>\.:..W..K.{...iN].....'......+...W..
+....(.....S...,.2h..|.^.oQ|...?...I
+.E....
+0
+
+GET /js/init.min.js HTTP/1.1
+Host: httpforever.com
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+Accept: */*
+Sec-GPC: 1
+Accept-Language: en-US,en;q=0.9
+Referer: http://httpforever.com/
+Accept-Encoding: gzip, deflate
+
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Ubuntu)
+Date: Wed, 31 Jul 2024 12:11:37 GMT
+Content-Type: application/javascript
+Content-Length: 1010
+Last-Modified: Wed, 16 Nov 2022 20:59:49 GMT
+Connection: keep-alive
+ETag: "63754f45-3f2"
+Referrer-Policy: strict-origin-when-cross-origin
+X-Content-Type-Options: nosniff
+Feature-Policy: accelerometer 'none'; camera 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; payment 'none'; usb 'none'
+Content-Security-Policy: default-src 'self'; script-src cdnjs.cloudflare.com 'self'; style-src cdnjs.cloudflare.com 'self' fonts.googleapis.com 'unsafe-inline'; font-src fonts.googleapis.com fonts.gstatic.com cdnjs.cloudflare.com; frame-ancestors 'none'; report-uri https://scotthelme.report-uri.com/r/d/csp/enforce
+Accept-Ranges: bytes
+
+!function(e){skel.init({reset:"full",breakpoints:{global:{range:"*",href:"css/style.min.css",containers:"75em",grid:{gutters:["3em",0]}},wide:{range:"-1680",href:"css/style-wide.min.css",grid:{gutters:["2.5em",0]}},normal:{range:"-1280",href:"css/style-normal.min.css",containers:"65em",grid:{gutters:["2em",0]},viewport:{scalable:!1}},narrow:{range:"-980",href:"css/style-narrow.min.css",containers:"90%"},narrower:{range:"-840",href:"css/style-narrower.min.css",containers:"90%!",grid:{collapse:!0}},mobile:{range:"-736",href:"css/style-mobile.min.css",containers:"100%!"},mobilep:{range:"-480",href:"css/style-mobilep.min.css"}},plugins:{layers:{config:{mode:function(){return skel.vars.isMobile?"transform":"position"}}}}}),e(function(){var s=e(window),n=(e("body"),e("#header")),r=e("#banner");!skel.vars.isMobile&&n.hasClass("alt")&&r.length>0&&s.on("load",function(){r.scrollwatch({delay:0,range:1,anchor:"top",on:function(){n.addClass("alt reveal")},off:function(){n.removeClass("alt")}})})})}(jQuery);GET /css/style.min.css HTTP/1.1
+Host: httpforever.com
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+Accept: text/css,*/*;q=0.1
+Sec-GPC: 1
+Accept-Language: en-US,en;q=0.9
+Referer: http://httpforever.com/
+Accept-Encoding: gzip, deflate
+
+GET /css/images/banner.svg HTTP/1.1
+Host: httpforever.com
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-GPC: 1
+Accept-Language: en-US,en;q=0.9
+Referer: http://httpforever.com/css/style.min.css
+Accept-Encoding: gzip, deflate
+
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Ubuntu)
+Date: Wed, 31 Jul 2024 12:11:38 GMT
+Content-Type: image/svg+xml
+Content-Length: 501
+Last-Modified: Wed, 16 Nov 2022 20:59:46 GMT
+Connection: keep-alive
+ETag: "63754f42-1f5"
+Referrer-Policy: strict-origin-when-cross-origin
+X-Content-Type-Options: nosniff
+Feature-Policy: accelerometer 'none'; camera 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; payment 'none'; usb 'none'
+Content-Security-Policy: default-src 'self'; script-src cdnjs.cloudflare.com 'self'; style-src cdnjs.cloudflare.com 'self' fonts.googleapis.com 'unsafe-inline'; font-src fonts.googleapis.com fonts.gstatic.com cdnjs.cloudflare.com; frame-ancestors 'none'; report-uri https://scotthelme.report-uri.com/r/d/csp/enforce
+Accept-Ranges: bytes
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1500" height="300" viewBox="0 0 1500 300" zoomAndPan="disable">
+
+    <style type="text/css"><![CDATA[
+		polygon {
+			fill: rgba(255,255,255,0.035);
+		}
+    ]]></style>
+    
+	<!-- Main -->
+		<polygon points="0,0 275,200 400,100 525,200 750,50 1100,250 1500,0 1500,300 0,300" />
+
+	<!-- Highlights -->
+		<polygon points="0,0 175,300 410,300" />
+		<polygon points="750,50 1100,250 900,365" />
+
+</svg>
