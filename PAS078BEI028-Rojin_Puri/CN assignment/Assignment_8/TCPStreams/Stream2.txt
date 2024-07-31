@@ -1,0 +1,20 @@
+GET /Computer-Network-Assignments/PAS078BEI028-Rojin_Puri/CN%20assignment/Assignment_8/UploadingFile/uploadingfile.html/ws HTTP/1.1
+Host: 127.0.0.1:5500
+Connection: Upgrade
+Pragma: no-cache
+Cache-Control: no-cache
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+Upgrade: websocket
+Origin: http://127.0.0.1:5500
+Sec-WebSocket-Version: 13
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+Sec-WebSocket-Key: kH28gwGrjq4ohA7jrNnTVA==
+Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: CHOceBFZNLOxhpseY+vJsBtC/tU=
+
+.	connected..<1..?.....
