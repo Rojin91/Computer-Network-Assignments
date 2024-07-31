@@ -1,0 +1,25 @@
+POST /upload HTTP/1.1
+Host: localhost:9000
+Connection: keep-alive
+Content-Length: 491430
+Cache-Control: max-age=0
+sec-ch-ua: "Chromium";v="127", "Not)A;Brand";v="99"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+Origin: http://127.0.0.1:5500
+DNT: 1
+Upgrade-Insecure-Requests: 1
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary87zjYjxYqWfOhHrS
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: http://127.0.0.1:5500/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+
+------WebKitFormBoundary87zjYjxYqWfOhHrS
+Content-Disposition: form-data; name="myFile"; filename="Screenshot 2024-07-31 at 4.50.47...PM.png"
+Content-Type: image/png
