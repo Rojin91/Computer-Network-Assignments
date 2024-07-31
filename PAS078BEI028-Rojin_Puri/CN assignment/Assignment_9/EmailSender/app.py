@@ -11,6 +11,7 @@ password = "Rojin345"
 subject = "Test Email"
 body = "This is a test email sent from Python."
 
+
 msg = MIMEMultipart()
 msg['From'] = sender_email
 msg['To'] = receiver_email
