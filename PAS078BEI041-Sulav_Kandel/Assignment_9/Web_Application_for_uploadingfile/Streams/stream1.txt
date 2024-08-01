@@ -1,0 +1,20 @@
+GET /PAS078BEI041-Sulav_Kandel/Assignment_9/Web_Application_for_uploadingfile/uploadingfile.html/ws HTTP/1.1
+Host: 127.0.0.1:5501
+Connection: Upgrade
+Pragma: no-cache
+Cache-Control: no-cache
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36
+Upgrade: websocket
+Origin: http://127.0.0.1:5501
+Sec-WebSocket-Version: 13
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Sec-WebSocket-Key: EWeNIEipbn+7eKc8nj1ofA==
+Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: lQ7b4WY1c/foC6wBRA+A6sMIASY=
+
+.	connected....a_......
