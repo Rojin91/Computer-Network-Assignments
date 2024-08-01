@@ -19,11 +19,7 @@ This repository contains all the assignments, projects, and reports completed du
 
 2. **Navigate to the desired directory**:
     ```bash
-    cd Computer-Network-Assignments/Assignments
-    # or
-    cd Computer-Network-Assignments/Projects
-    # or
-    cd Computer-Network-Assignments/Reports
+    cd Computer-Network-Assignments/
     ```
 
 3. **Follow the instructions in the respective README files for each assignment/project/report**.
