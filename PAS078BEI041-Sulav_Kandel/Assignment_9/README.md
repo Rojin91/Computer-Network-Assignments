@@ -28,13 +28,13 @@ This is inital step where a TCP connection is established between a client and a
 
 **Packets Involved:**
 - **SYN Packet**: The client (source port 63209) initiates the connection by sending a SYN packet to the server (destination port 8080).
-  - `No. 38 - 63209 → 8080 [SYN] Seq=0 Win=65535 Len=0 MSS=16324 WS=64 TSval=3524908965 TSecr=0 SACK_PERM`
+  - ` No. 43 - 64956 → 8080 [SYN] Seq=0 Win=65535 Len=0 MSS=16324 WS=64 TSval=3357812407 TSecr=0 SACK_PERM`
 
 - **SYN-ACK Packet**: The server responds with a SYN-ACK packet, acknowledging the SYN request and sending its own SYN to the client.
-  - `No. 39 - 8080 → 63209 [SYN, ACK] Seq=0 Ack=1 Win=65535 Len=0 MSS=16324 WS=64 TSval=65867666 TSecr=3524908965 SACK_PERM`
+  - `No. 44 - 8080 → 64956 [SYN, ACK] Seq=0 Ack=1 Win=65535 Len=0 MSS=16324 WS=64 TSval=1015158397 TSecr=3357812407 SACK_PERM`
 
 - **ACK Packet**: The client acknowledges the server’s response with an ACK packet.
-  - `No. 40 - 63209 → 8080 [ACK] Seq=1 Ack=1 Win=407744 Len=0 TSval=3524908965 TSecr=65867666`
+  - `No. 45 - 64956 → 8080 [ACK] Seq=1 Ack=1 Win=407744 Len=0 TSval=3357812407 TSecr=1015158397`
 
 ## 2. Connection Maintenance
 
@@ -42,16 +42,14 @@ Once the connection is established, data can be transferred between the client a
 
 **Packets Involved:**
 - **Data Transfer**: Actual data being transferred between the client and server.
-  - `No. 41 - 8080 → 63209 [PSH, ACK] Seq=1 Ack=1 Win=407744 Len=937 TSval=65867667 TSecr=3524908965 [TCP segment of a reassembled PDU]`
-  - `No. 42 - 63209 → 8080 [ACK] Seq=1 Ack=937 Win=407744 Len=0 TSval=3524908965 TSecr=65867667`
-  - `No. 45 - 8080 → 63209 [PSH, ACK] Seq=862 Ack=1 Win=406912 Len=16388 TSval=65867668 TSecr=3524908965 [TCP segment of a reassembled PDU]`
-  - `No. 46 - 63209 → 8080 [ACK] Seq=1 Ack=17246 Win=407744 Len=0 TSval=3524908966 TSecr=65867668`
-  - `No. 50 - 8080 → 63209 [PSH, ACK] Seq=49942 Ack=1 Win=407744 Len=148 TSval=65867670 TSecr=3524908968 [TCP segment of a reassembled PDU]`
-  - `No. 51 - 63209 → 8080 [ACK] Seq=1 Ack=4508 Win=407744 Len=0 TSval=3524908969 TSecr=65867670`
+  - `No. 47 - 64956 → 8080 [PSH, ACK] Seq=1 Ack=1 Win=407744 Len=873 TSval=3357812407 TSecr=1015158397 [TCP segment of a reassembled PDU]`
+  - `No. 48 - 8080 → 64956 [ACK] Seq=873 Ack=874 Win=407744 Len=0 TSval=1015158398 TSecr=3357812407`
+  - `No. 49 - 8080 → 64956 [PSH, ACK] Seq=874 Ack=874 Win=407744 Len=512 TSval=1015158398 TSecr=3357812407 [TCP segment of a reassembled PDU]`
+  - `No. 50 - 64956 → 8080 [ACK] Seq=874 Ack=1386 Win=407744 Len=0 TSval=3357812408 TSecr=1015158398`
+  - `No. 51 - 64956 → 8080 [PSH, ACK] Seq=1386 Ack=1386 Win=407744 Len=512 TSval=3357812408 TSecr=1015158398 [TCP segment of a reassembled PDU]`
 
 - **HTTP Requests and Responses**: Exchange of HTTP requests and responses.
-  - `No. 56 - POST /upload HTTP/1.1 (PNG)`
-  - `No. 58 - HTTP/1.1 200 OK (text/plain)`
+  - `No. 127 - 64956 → 8080 [POST /upload HTTP/1.1 (PNG)]`
 
 ## 3. Connection Termination
 
@@ -59,16 +57,16 @@ When the data transfer is complete, the connection is closed  using a terminatio
 
 **Packets Involved:**
 - **FIN Packet**: One side initiates the connection termination by sending a FIN (Finish) packet.
-  - `No. 80 - 63209 → 8080 [FIN, ACK] Seq=60221 Ack=334 Win=407424 Len=0 TSval=3524912415 TSecr=658680876`
+  - `No. 129 - 64956 → 8080 [FIN, ACK] Seq=462664 Ack=467072 Win=407744 Len=0 TSval=3357812407 TSecr=1015158397`
 
 - **ACK Packet**: The other side acknowledges the FIN packet with an ACK.
-  - `No. 81 - 8080 → 63209 [ACK] Seq=334 Ack=60222 Win=347520 Len=0 TSval=658681316 TSecr=3524912415`
+  - `No. 130 - 8080 → 64956 [ACK] Seq=467072 Ack=462665 Win=292288 Len=0 TSval=1015158401 TSecr=3357812407`
 
 - **FIN Packet**: The other side sends its own FIN packet to complete the termination process.
-  - `No. 82 - 8080 → 63209 [FIN, ACK] Seq=334 Ack=60222 Win=347520 Len=0 TSval=658681316 TSecr=3524912415`
+  - `No. 131 - 8080 → 64956 [FIN, ACK] Seq=467072 Ack=462665 Win=292288 Len=0 TSval=1015158401 TSecr=3357812407`
 
 - **Final ACK**: The initial side acknowledges the final FIN packet.
-  - `No. 83 - 63209 → 8080 [ACK] Seq=60222 Ack=335 Win=407424 Len=0 TSval=3524912415 TSecr=658681316`
+  - `No. 132 - 64956 → 8080 [ACK] Seq=462665 Ack=467073 Win=407744 Len=0 TSval=3357812407 TSecr=1015158401`
 
       
 
