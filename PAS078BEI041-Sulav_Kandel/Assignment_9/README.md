@@ -69,6 +69,3 @@ When the data transfer is complete, the connection is closed  using a terminatio
   - `No. 132 - 64956 → 8080 [ACK] Seq=462665 Ack=467073 Win=407744 Len=0 TSval=3357812407 TSecr=1015158401`
 
       
-
- 
-
