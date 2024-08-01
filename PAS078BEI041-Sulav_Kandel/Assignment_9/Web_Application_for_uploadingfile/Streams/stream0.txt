@@ -1,0 +1,30 @@
+GET /PAS078BEI041-Sulav_Kandel/Assignment_9/Web_Application_for_uploadingfile/uploadingfile.html HTTP/1.1
+Host: 127.0.0.1:5501
+Connection: keep-alive
+sec-ch-ua: "Not/A)Brand";v="8", "Chromium";v="126"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+DNT: 1
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+If-None-Match: W/"1b5-1910ca73f65"
+If-Modified-Since: Thu, 01 Aug 2024 06:36:13 GMT
+
+HTTP/1.1 304 Not Modified
+Vary: Origin
+Access-Control-Allow-Credentials: true
+Accept-Ranges: bytes
+Cache-Control: public, max-age=0
+Last-Modified: Thu, 01 Aug 2024 06:36:13 GMT
+ETag: W/"1b5-1910ca73f65"
+Date: Thu, 01 Aug 2024 06:37:14 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
